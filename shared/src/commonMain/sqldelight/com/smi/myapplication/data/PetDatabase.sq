@@ -1,0 +1,26 @@
+CREATE TABLE PetEntity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    image_url TEXT NOT NULL,
+    age INTEGER NOT NULL,
+    breed TEXT NOT NULL,
+    likes TEXT NOT NULL,
+    color TEXT NOT NULL,
+    weight REAL NOT NULL
+);
+
+selectAll:
+SELECT * FROM PetEntity;
+
+selectById:
+SELECT * FROM PetEntity WHERE id = ?;
+
+insert:
+INSERT INTO PetEntity(name, image_url, age, breed, likes, color, weight)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+deleteAll:
+DELETE FROM PetEntity;
+
+countAll:
+SELECT COUNT(*) FROM PetEntity;
